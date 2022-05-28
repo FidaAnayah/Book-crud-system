@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- bootsrtap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="addBook ">
+    <div class="container row">
+        <h1 class="bg-warning capitalize head">add book</h1>
+        <label for="" class="capitalize labels">title <span class="text-danger">*</span></label>
+        <input   class="inputs form-control" type="text" placeholder="Enter Book Title"  id="title">
+        <div class="alert alert-danger d-none" id="titleAlert">Plese start with capital letter and name should be between 3 and 20 charecters</div>
+        <label for="" class="capitalize labels">auther<span class="text-danger">*</span></label>
+        <input class="inputs form-control" type="text" placeholder="Enter Book Auther" id="auther">
+        <label for="" class="capitalize labels">publisher<span class="text-danger">*</span></label>
+        <input class="inputs form-control" type="text" placeholder="Enter Book Publisher" id="publisher">
+        <label for="" class="capitalize labels">genre<span class="text-danger">*</span></label>
+        <input class="inputs" list="genre-list" placeholder="Choose Book Gener" id="genre"> 
+        <datalist id="genre-list">
+          <option value="Fiction"></option>
+          <option value="Novel"></option>
+         <option value="Fantasy"></option>
+         <option value="Childrens"></option>
+         <option value="Literary Fiction"></option>
+         <option value="Science Fiction"></option>
+         <option value="Young Adult"></option>
+         <option value="Thrillers"></option>
+         <option value="Picture Book"></option>
+         <option value="Romance"></option>
+         <option value="Historical"></option>
+         <option value="Mystery"></option>
+         <option value="Adventure"></option>
+         <option value="Romance Novel"></option>
+         <option value="Memoir"></option>
+         <option value="Poetry"></option>
+         <option value="Self-help book"></option>
+         <option value="Humer"></option>
+         <option value="Spirituality"></option>
+         <option value="politics"></option>
+         <option value="Comics"></option>
+         <option value="Articale"></option>
+        </datalist>
+        <label for="" class="capitalize labels">price<span class="text-danger">*</span></label>
+        <input class="inputs form-control" type="number" placeholder="Enter Book Price" id="price">
+        <div class="row-btn">
+        <button id="click" type="button" class="btn btn-success" disabled>Add Book</button>
+        <button type="reset" class="btn btn-danger" >Cancel</button>
+    </div>
+
+    <input type="search" class="form-control" placeholder="search..." id="search" onkeyup="search(this.value)">
+     <div class="row-btn">
+     <button id="deleteAll" class="btn btn-danger m-2 ">Delete All</button>
+   </div>
+    </div>
+   <table class="table">
+    <thead>
+     
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Auther</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Gener</th>
+        <th scope="col">Price</th>
+        <th scope="col"><SPan class="update-span">update</SPan></th>
+        <th scope="col"><SPan class="delete-span">delete</SPan></th>
+       
+      </tr>
+    </thead>
+    
+    <tbody id="data">
+      
+    </tbody>
+  </table>
+   </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
