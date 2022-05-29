@@ -7,6 +7,8 @@
     <title>Document</title>
     <!-- font awesome css -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Sweet Alert -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.css" rel="stylesheet">
     <!-- bootstrap js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- bootsrtap css -->
@@ -23,10 +25,13 @@
         <div class="alert alert-danger d-none" id="titleAlert">Plese start with capital letter and name should be between 3 and 20 charecters</div>
         <label for="" class="capitalize labels">auther<span class="text-danger">*</span></label>
         <input class="inputs form-control" type="text" placeholder="Enter Book Auther" id="auther">
+        <div class="alert alert-danger d-none" id="autherAlert">Plese start with capital letter and name should be between 3 and 20 charecters</div>
         <label for="" class="capitalize labels">publisher<span class="text-danger">*</span></label>
         <input class="inputs form-control" type="text" placeholder="Enter Book Publisher" id="publisher">
+        <div class="alert alert-danger d-none" id="publisherAlert">Plese start with capital letter and name should be between 3 and 20 charecters</div>
         <label for="" class="capitalize labels">genre<span class="text-danger">*</span></label>
         <input class="inputs" list="genre-list" placeholder="Choose Book Gener" id="genre"> 
+        <div class="alert alert-danger d-none" id="genreAlert">please Choose from the list</div>
         <datalist id="genre-list">
           <option value="Fiction"></option>
           <option value="Novel"></option>
@@ -53,6 +58,11 @@
         </datalist>
         <label for="" class="capitalize labels">price<span class="text-danger">*</span></label>
         <input class="inputs form-control" type="number" placeholder="Enter Book Price" id="price">
+        <div class="alert alert-danger d-none" id="priceAlert">price cant be zero or less,
+          Maximum 8 digits before decimal(.) point,
+          Maximum 4 digits after decimal point,
+          Decimal point is optional.
+        </div>
         <div class="row-btn">
         <button id="click" type="button" class="btn btn-success" disabled>Add Book</button>
         <button type="reset" class="btn btn-danger" >Cancel</button>
@@ -69,7 +79,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Title</th>
-        <th scope="col">Auther</th>
+        <th scope="col">Auther</th>+
         <th scope="col">Publisher</th>
         <th scope="col">Gener</th>
         <th scope="col">Price</th>
@@ -84,7 +94,7 @@
     </tbody>
   </table>
    </div>
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js" integrity="sha512-F3F53+tMh/CBxMQ60GN5R4EiFW7PcuND+9IDC3Qpkwc7SfxgzHigRdUO3+2+mNal2ot3Wp6KR0zx8r8BbsW+Bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
